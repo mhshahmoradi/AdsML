@@ -1,11 +1,10 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using AdsML.Infrastructure.EFCore;
 
 namespace Shared.Infrastructure;
 
-public class UnitOfWork(DbContext dbContext) : IUnitOfWork
+public class UnitOfWork(AdsMLContext dbContext) : IUnitOfWork
 {
-    private readonly DbContext _dbContext = dbContext;
+    private readonly AdsMLContext _dbContext = dbContext;
     public async Task BeginTran(CancellationToken cancellationToken)
     {
        await _dbContext.Database.BeginTransactionAsync(cancellationToken);
