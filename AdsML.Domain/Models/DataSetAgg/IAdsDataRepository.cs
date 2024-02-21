@@ -4,6 +4,6 @@ namespace AdsML.Domain.Models.DataSetAgg;
 
 public interface IAdsDataRepository
 {
-    public Task<OperationResult> GetAll();
-    public Task<OperationResult> Add(AdsData command);
+    public Task<ICollection<AdsData>> GetAll(CancellationToken cancellationToken);
+    public Task<OperationResult> Add(AdsData command, CancellationToken cancellationToken);
 }
