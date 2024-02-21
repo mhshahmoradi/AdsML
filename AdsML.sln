@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.EFCore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.ML", "AdsML.Infrastructure.ML\AdsML.Infrastructure.ML.csproj", "{EC637A33-98A7-41FE-85DE-256CC39E9056}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{EC637A33-98A7-41FE-85DE-256CC39E9056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC637A33-98A7-41FE-85DE-256CC39E9056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC637A33-98A7-41FE-85DE-256CC39E9056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
