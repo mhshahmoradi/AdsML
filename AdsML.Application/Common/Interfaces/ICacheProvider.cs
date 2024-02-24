@@ -7,5 +7,5 @@ public interface ICacheProvider
     public bool Set(string key, PredictViewModel value, DateTime expirationDate);
     public bool Set(string key, PredictViewModel value);
     void Remove(string key);
-    PredictViewModel Get(string key);
+    (bool Result, PredictViewModel Data) TryGet(string key);
 }

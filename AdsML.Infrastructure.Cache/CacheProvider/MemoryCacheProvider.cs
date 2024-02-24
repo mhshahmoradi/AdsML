@@ -9,9 +9,10 @@ public class MemoryCacheProvider(IMemoryCache cache)
 {
     private readonly IMemoryCache _cache = cache;
 
-    public PredictViewModel Get(string key)
+    public (bool Result, PredictViewModel Data) TryGet(string key)
     {
-       return (PredictViewModel)_cache.Get(key);
+        var result = _cache.TryGetValue(key, out PredictViewModel viewModel);
+        return (result, viewModel);
     }
 
     public void Remove(string key)

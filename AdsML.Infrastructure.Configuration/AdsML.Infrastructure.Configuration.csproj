@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdsML.Application\AdsML.Application.csproj" />
+    <ProjectReference Include="..\AdsML.Domain\AdsML.Domain.csproj" />
+    <ProjectReference Include="..\AdsML.Infrastructure.Cache\AdsML.Infrastructure.Cache.csproj" />
+    <ProjectReference Include="..\AdsML.Infrastructure.EFCore\AdsML.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\AdsML.Infrastructure.ML\AdsML.Infrastructure.ML.csproj" />
+  </ItemGroup>
+
 </Project>
