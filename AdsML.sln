@@ -11,19 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdsML.Domain", "AdsML.Domai
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdsML.Infrastructure", "AdsML.Infrastructure", "{EAAD72ED-F0E8-49FA-992A-58403100CBCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Application", "AdsML.Application\AdsML.Application.csproj", "{65372C0F-F9B7-4CA0-9F8E-D89C43A2B8E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdsML.Application", "AdsML.Application\AdsML.Application.csproj", "{65372C0F-F9B7-4CA0-9F8E-D89C43A2B8E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Domain", "AdsML.Domain\AdsML.Domain.csproj", "{7B837F6C-3D52-4FE8-ACEB-ED5B04737269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdsML.Domain", "AdsML.Domain\AdsML.Domain.csproj", "{7B837F6C-3D52-4FE8-ACEB-ED5B04737269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.Configuration", "AdsML.Infrastructure.Configuration\AdsML.Infrastructure.Configuration.csproj", "{B0983E20-79A3-42EC-9E32-1FF878DA6899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdsML.Infrastructure.Configuration", "AdsML.Infrastructure.Configuration\AdsML.Infrastructure.Configuration.csproj", "{B0983E20-79A3-42EC-9E32-1FF878DA6899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.EFCore", "AdsML.Infrastructure.EFCore\AdsML.Infrastructure.EFCore.csproj", "{5731C218-12C9-4F06-91CD-BF95200B5C85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdsML.Infrastructure.EFCore", "AdsML.Infrastructure.EFCore\AdsML.Infrastructure.EFCore.csproj", "{5731C218-12C9-4F06-91CD-BF95200B5C85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.ML", "AdsML.Infrastructure.ML\AdsML.Infrastructure.ML.csproj", "{EC637A33-98A7-41FE-85DE-256CC39E9056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdsML.Infrastructure.ML", "AdsML.Infrastructure.ML\AdsML.Infrastructure.ML.csproj", "{EC637A33-98A7-41FE-85DE-256CC39E9056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{CF247F43-C8F4-40D2-AB91-6BC9AAD9AE24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{533C5709-8B50-420E-9CF5-68CED1450704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{533C5709-8B50-420E-9CF5-68CED1450704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.Infrastructure.Cache", "AdsML.Infrastructure.Cache\AdsML.Infrastructure.Cache.csproj", "{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{533C5709-8B50-420E-9CF5-68CED1450704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{533C5709-8B50-420E-9CF5-68CED1450704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{533C5709-8B50-420E-9CF5-68CED1450704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{B0983E20-79A3-42EC-9E32-1FF878DA6899} = {EAAD72ED-F0E8-49FA-992A-58403100CBCD}
 		{5731C218-12C9-4F06-91CD-BF95200B5C85} = {EAAD72ED-F0E8-49FA-992A-58403100CBCD}
 		{EC637A33-98A7-41FE-85DE-256CC39E9056} = {EAAD72ED-F0E8-49FA-992A-58403100CBCD}
+		{B54827FB-1BF1-4E61-8DB8-B8BC25CB9889} = {EAAD72ED-F0E8-49FA-992A-58403100CBCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {766C9DD5-4A74-49CD-96D8-D9562A4D9AAD}

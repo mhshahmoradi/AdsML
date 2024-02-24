@@ -2,5 +2,5 @@
 
 public static class ApplicationMessages
 {
-    public const string OperationFailed = "عملیات با شکست مواجه شد.";
+    public const string OperationFailed = "The operation failed.";
 }

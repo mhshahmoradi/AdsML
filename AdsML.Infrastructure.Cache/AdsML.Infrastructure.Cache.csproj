@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ML" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdsML.Domain\AdsML.Domain.csproj" />
+    <ProjectReference Include="..\AdsML.Application\AdsML.Application.csproj" />
   </ItemGroup>
 
 </Project>
