@@ -4,6 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using ServiceHost.Middleware;
 using Shared;
 using AdsML.Infrastructure.Configuration;
+using Hangfire;
+using Hangfire.Storage.SQLite;
+using AdsML.Application.Notification.Retrain;
+using System.Reflection;
+using Hangfire.Common;
+using ServiceHost.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,16 +24,29 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHangfire(configuration => configuration
+            .UseSimpleAssemblyNameTypeSerializer()
+            .UseRecommendedSerializerSettings()
+            .UseSQLiteStorage("hangfire.db"));
+
+builder.Services.AddHangfireServer();
+
 builder.Services.AddExceptionHandler<BusinessValidationExceptionHandling>();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
-app.MapPost("/Predict", async Task<IActionResult>(ISender _mediarR, [FromBody] PredictCommand command) =>
+app.MapPost("/Predict", async Task<IActionResult> (ISender _mediarR, [FromBody] PredictCommand command) =>
 {
     var result = await _mediarR.Send(command);
     return new OkObjectResult(result);
 });
+
+app.Services.GetService<IRecurringJobManager>().AddOrUpdate<BackgroundTask>(
+    "RetrainTask",
+    service => service.Retrain(),
+    Cron.Daily(4)
+    );
 
 app.UseExceptionHandler();
 
