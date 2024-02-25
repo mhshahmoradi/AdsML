@@ -362,3 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /ServiceHost/appsettings.Development.json
+/ServiceHost/hangfire.db
+/ServiceHost/hangfire.db-shm
+/ServiceHost/hangfire.db-wal
