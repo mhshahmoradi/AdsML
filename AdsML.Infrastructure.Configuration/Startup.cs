@@ -40,7 +40,7 @@ public static class Startup
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
 
-        services.AddDbContext<AdsMLContext>(x => x.UseSqlServer(ConnectionString));
+        services.AddDbContext<AdsMLContext>(x => x.UseSqlite(ConnectionString));
 
         return services;
     }
