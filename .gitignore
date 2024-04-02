@@ -365,3 +365,4 @@ FodyWeavers.xsd
 /ServiceHost/hangfire.db
 /ServiceHost/hangfire.db-shm
 /ServiceHost/hangfire.db-wal
+/ServiceHost/ApplicationDb.db
