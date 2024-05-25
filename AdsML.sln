@@ -3,17 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{93CFFF8B-5900-4AD7-BFD3-A14D1540A932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML", "src\AdsML\AdsML.csproj", "{836A498C-EC7A-486D-8B26-CF22BD8B5647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{887B2B43-681F-417E-B747-85CA6058744D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsML.UnitTest", "tests\AdsML.UnitTest\AdsML.UnitTest.csproj", "{B37E7E66-C926-4674-9765-CFA9DA6D37DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836A498C-EC7A-486D-8B26-CF22BD8B5647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836A498C-EC7A-486D-8B26-CF22BD8B5647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836A498C-EC7A-486D-8B26-CF22BD8B5647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836A498C-EC7A-486D-8B26-CF22BD8B5647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37E7E66-C926-4674-9765-CFA9DA6D37DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37E7E66-C926-4674-9765-CFA9DA6D37DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37E7E66-C926-4674-9765-CFA9DA6D37DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37E7E66-C926-4674-9765-CFA9DA6D37DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {766C9DD5-4A74-49CD-96D8-D9562A4D9AAD}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{836A498C-EC7A-486D-8B26-CF22BD8B5647} = {93CFFF8B-5900-4AD7-BFD3-A14D1540A932}
+		{B37E7E66-C926-4674-9765-CFA9DA6D37DE} = {887B2B43-681F-417E-B747-85CA6058744D}
 	EndGlobalSection
 EndGlobal
