@@ -1,7 +1,12 @@
+using AdsML;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.ConfigureDbContexts(builder.Configuration);
+builder.Services.ConfigureValidator();
 
 var app = builder.Build();
 
