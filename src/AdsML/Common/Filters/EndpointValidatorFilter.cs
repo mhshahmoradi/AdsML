@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace DigitalWallet.Common.Filters;
+namespace AdsML.Common.Filters;
 
 internal class EndpointValidatorFilter<T>(IValidator<T> validator) : IEndpointFilter
 {

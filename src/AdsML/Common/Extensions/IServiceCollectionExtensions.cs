@@ -1,4 +1,4 @@
-﻿namespace AdsML;
+﻿namespace AdsML.Common.Extensions;
 
 internal static class IServiceCollectionExtensions
 {
