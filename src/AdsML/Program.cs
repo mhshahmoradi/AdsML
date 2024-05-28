@@ -1,5 +1,8 @@
 using AdsML.Common.Extensions;
 using AdsML.Common.Shared;
+using AdsML.Features.Ads.Common;
+using AdsML.Features.Ads.Common.AdsMLModels;
+using Microsoft.Extensions.ML;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,9 @@ builder.Services.AddOptions<AppSetting>()
 
 builder.Services.ConfigureDbContexts(builder.Configuration);
 builder.Services.ConfigureValidator();
+
+builder.Services.AddPredictionEnginePool<ModelInput,ModelOutput>()
+.LoadModel(builder.Configuration);
 
 var app = builder.Build();
 
