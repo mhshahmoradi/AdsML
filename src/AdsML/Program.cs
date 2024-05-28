@@ -1,3 +1,4 @@
+using AdsML;
 using AdsML.Common.Extensions;
 using AdsML.Common.Shared;
 using AdsML.Features.Ads.Common;
@@ -17,6 +18,8 @@ builder.Services.ConfigureValidator();
 
 builder.Services.AddPredictionEnginePool<ModelInput,ModelOutput>()
 .LoadModel(builder.Configuration);
+
+builder.Services.AddSingleton<PredictService>();
 
 var app = builder.Build();
 
