@@ -1,18 +1,19 @@
 ﻿using AdsML.Common.Shared;
 using AdsML.Features.Ads.Common.AdsMLModels;
+using AdsML.Features.Ads.Predict;
 using Microsoft.Extensions.ML;
 using Microsoft.Extensions.Options;
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
 
-namespace AdsML;
+namespace AdsML.Features.Ads.Common;
 
-public class PredictService(PredictionEngine<ModelInput,ModelOutput> predictionEngine, IOptions<AppSetting> options)
+public class PredictService(PredictionEnginePool<ModelInput, ModelOutput> predictionEngine, IOptions<AppSetting> options)
 {
-    private readonly PredictionEngine<ModelInput, ModelOutput> _predictionEngine = predictionEngine;
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEngine = predictionEngine;
     private readonly AppSetting _options = options.Value;
 
-    internal PredictResponse Predict(PredictModel predictModel)
+    public PredictResponseModel Predict(PredictModel predictModel)
     {
         var model = new ModelInput(predictModel.content);
         var response = _predictionEngine.Predict(model);

@@ -10,8 +10,8 @@ public class ModelOutput
     [ColumnName(@"Score")]
     public float[]? Score { get; set; }
 
-    internal PredictResponse ToPredictResponse()
+    public PredictResponseModel ToPredictResponse()
     {
-        return new PredictResponse(this.PredictedLabel, Score[0]);
+        return new PredictResponseModel(this.PredictedLabel, Score[0]);
     }
 }

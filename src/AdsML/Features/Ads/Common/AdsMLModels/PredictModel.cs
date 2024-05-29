@@ -1,3 +1,3 @@
 ﻿namespace AdsML.Features.Ads.Common.AdsMLModels;
 
-internal record PredictModel(string content);
+public record PredictModel(string content);

@@ -1,7 +1,6 @@
 ﻿using AdsML.Common.Persistence;
-using AdsML.Features.Ads.Common;
 
-namespace AdsML;
+namespace AdsML.Features.Ads.Common;
 
 public class AdsDataEfConfiguration : IEntityTypeConfiguration<AdsData>
 {
