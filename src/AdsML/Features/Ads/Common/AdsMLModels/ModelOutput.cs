@@ -12,6 +12,6 @@ public class ModelOutput
 
     public PredictResponseModel ToPredictResponse()
     {
-        return new PredictResponseModel(this.PredictedLabel, Score[0]);
+        return new PredictResponseModel(this.PredictedLabel, Score?[0]);
     }
 }
