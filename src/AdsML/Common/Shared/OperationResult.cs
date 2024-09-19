@@ -5,13 +5,13 @@ public class OperationResult
     public bool IsSuccess { get; set; }
     public string Message { get; set; }
 
-    public OperationResult(bool isSuccedded, string message)
+    public OperationResult(bool isSucceeded, string message)
     {
-        IsSuccess = isSuccedded;
+        IsSuccess = isSucceeded;
         Message = message;
     }
 
-    public static OperationResult Succeeded(string message = "عملیات با موفقیت انجام شد.") => new(message: message, isSuccedded: true);
-    public static OperationResult Failed(string message) => new(message: message, isSuccedded: false);
+    public static OperationResult Succeeded(string message = "عملیات با موفقیت انجام شد.") => new(message: message, isSucceeded: true);
+    public static OperationResult Failed(string message) => new(message: message, isSucceeded: false);
 
 }
